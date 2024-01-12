@@ -12,7 +12,7 @@
                 <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                        <img class="card-img-top" src="<?= base_url('assets/') ?>MSA.png" />
+                        <img class="card-img-top" src="<?= base_url('assets/images/produk/') . $us['gambar']; ?>" alt="Product Image" />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -24,15 +24,14 @@
                                     <?= $us['deskripsi']; ?>
                                 </p>
                                 <!-- Product price-->
-                                <?= $us['harga']; ?>
+                                Rp. <?= $us['harga']; ?> /pcs
                             </div>
                         </div>
                         <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <td>
-                                <a href="<?= base_url('Admin/hapus/') . $us['id']; ?> ini di tombol hapus" class="btn btn-danger">Hapus</a>
-                                <a href="<?= base_url('admin/edit/') . $us['id']; ?>" class="btn btn-warning">Edit</a>
-                                <a href=" " class="btn btn-info">Detail</a>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent text-center">
+                            <td class="d-flex justify-content-center">
+                                <a href="<?= base_url('Admin/hapus/') . $us['id']; ?>" class="btn btn-danger">Hapus</a>
+                                <a href="<?= base_url('Admin/edit/') . $us['id']; ?>" class="btn btn-warning">Edit</a>                             
                             </td>
                         </div>
                     </div>
